@@ -1,30 +1,44 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
-</html>
+<p><b>Dopan testailusivu</b></p>
+<p>Testi</p>
+
+<script type="text/javascript">
+
+function VaihdaVari(vari)
+{
+	document.bgColor = vari;
+}
+
+function TarkistaIka()
+{
+var ika = document.lomake.ika.value;
+	// Jos ika-muuttujassa on merkkijono, on ehto tosi ja if-lause suoritetaan:
+	if(isNaN(ika))
+		alert("Antamasi syöte on virheellinen. Syötä luku!");
+    else if(ika == "")
+        alert("Syötä luku!");
+    else if(ika < 0)
+        alert("Syöta positiivinen luku!");
+    else
+        alert("Toimii");
+}
+
+var linkin_nimi = "Ohjelmointiputkaan";
+document.write(linkin_nimi.link("http://www.ohjelmointiputka.net") + "<br>");
+
+document.write("Käyttämäsi selain on " + navigator.appName + "<br>");
+
+</script>
+
+<form name="lomake">
+    <b>Ikä:</b>
+    <input type="text" size="5" name="ika" />
+    <input type="button" value="Tarkista" onclick="TarkistaIka()" />
+</form>
+
+<form name="varin_vaihto">
+
+	<input type="button" name="vari_1" value="Sininen" onclick="VaihdaVari('#002AFF')">
+	<input type="button" name="vari_2" value="Punertava" onclick="VaihdaVari('#FF4E00')">
+	<input type="button" name="vari_3" value="Vihreä" onclick="VaihdaVari('#397400')">
+
+</form>
