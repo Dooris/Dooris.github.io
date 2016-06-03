@@ -1,44 +1,39 @@
-<p><b>Dopan testailusivu</b></p>
-<p>Testi</p>
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8" />
+    <!-- link to main stylesheet -->
+    <!--<link rel="stylesheet" type="text/css" href="/css/main.css">-->
+    <title>Dopan testailusivu</title>
+    <link href="site.css" rel="stylesheet">
+</head>
+    
+<body>
+    <nav id="nav01"></nav>
+    
+    <div id="main">
+    <h1>Dopan testailusivusto</h1>
+    <p>Testi</p>
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
-function VaihdaVari(vari)
-{
-	document.bgColor = vari;
-}
+        var linkin_nimi = "Ohjelmointiputkaan";
+        document.write(linkin_nimi.link("http://www.ohjelmointiputka.net") + "<br>");
 
-function TarkistaIka()
-{
-var ika = document.lomake.ika.value;
-	// Jos ika-muuttujassa on merkkijono, on ehto tosi ja if-lause suoritetaan:
-	if(isNaN(ika))
-		alert("Antamasi syöte on virheellinen. Syötä luku!");
-    else if(ika == "")
-        alert("Syötä luku!");
-    else if(ika < 0)
-        alert("Syöta positiivinen luku!");
-    else
-        alert("Toimii");
-}
+        document.write("Käyttämäsi selain on " + navigator.appName + "<br>");
 
-var linkin_nimi = "Ohjelmointiputkaan";
-document.write(linkin_nimi.link("http://www.ohjelmointiputka.net") + "<br>");
+    </script>
 
-document.write("Käyttämäsi selain on " + navigator.appName + "<br>");
+    <form name="lomake">
+        <b>Ikä:</b>
+        <input type="text" size="5" name="ika" />
+        <input type="button" value="Tarkista" onclick="TarkistaIka()" />
+    </form>
 
-</script>
-
-<form name="lomake">
-    <b>Ikä:</b>
-    <input type="text" size="5" name="ika" />
-    <input type="button" value="Tarkista" onclick="TarkistaIka()" />
-</form>
-
-<form name="varin_vaihto">
-
-	<input type="button" name="vari_1" value="Sininen" onclick="VaihdaVari('#002AFF')">
-	<input type="button" name="vari_2" value="Punertava" onclick="VaihdaVari('#FF4E00')">
-	<input type="button" name="vari_3" value="Vihreä" onclick="VaihdaVari('#397400')">
-
-</form>
+    <footer id="foot01"></footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
