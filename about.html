@@ -3,18 +3,31 @@
 <head>
   <title>Minusta</title>
    <link href="site.css" rel="stylesheet">
+   <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79522216-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
 
  <body>
  <nav id="nav01"></nav>
 
  <div id="main">
-   <h1>Minusta</h1>
+  <h1>Minusta</h1>
   <p>Tämä on kokeilusivustoni, jolla harjoittelen nettisivujen luomista.</p>
-   <footer id="foot01"></footer>
- </div>
 
-<script src="script.js"></script>
+  <div id="map"></div>
+
+  <footer id="foot01"></footer>
+  </div>
+  
+  <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 
 </body>
 </html> 

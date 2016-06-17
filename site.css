@@ -43,3 +43,8 @@ ul#menu li a:hover {
     color: white;
     background-color: #871F78;
 }
+
+#map {
+        width: 500px;
+        height: 400px;
+      }
