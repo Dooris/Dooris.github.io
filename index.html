@@ -3,10 +3,10 @@
     
 <head>
     <meta charset="utf-8" />
-    <!-- link to main stylesheet -->
-    <!--<link rel="stylesheet" type="text/css" href="/css/main.css">-->
     <title>Dopan testailusivu</title>
     <link href="site.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="jqueryscript.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -24,25 +24,22 @@
     
     <div id="main">
     <h1>Dopan testailusivusto</h1>
-    <p>Testi</p>
-    <div>
-        <b>Kävijälaskuri<br></b>
-        <a href="http://www.freecounterstat.com" title="website counter code"><img src="http://counter8.01counter.com/private/freecounterstat.php?c=cc9133be3948a84aa4a5b9f33c746701" border="0" title="website counter code" alt="website counter code"></a>
+    <div class="row">
+        <div class="col-3-4">
+            <h2>Painomuunnin (kg-lb)</h2>
+            <p>Kg: <input type="text" id="kg" value="">
+            <button id="kgtolb">Muunna paunoiksi</button></p>
+            <p>Lb: <input type="text" id="lb" value="">
+            <button id="lbtokg">Muunna kilogrammoiksi</button></p>
+        </div>
+        <div class="col-1-4">
+            <h>Kalenteri</h>
+            <p></p>
+            <div class="rcorners1">
+                <div id="calender"></div>
+            </div>
+        </div>
     </div>
-    <script type="text/javascript">
-
-        var linkin_nimi = "Ohjelmointiputkaan";
-        document.write(linkin_nimi.link("http://www.ohjelmointiputka.net") + "<br>");
-
-        document.write("Käyttämäsi selain on " + navigator.appName + "<br>");
-
-    </script>
-
-    <form name="lomake">
-        <b>Ikä:</b>
-        <input type="text" size="5" name="ika" />
-        <input type="button" value="Tarkista" onclick="TarkistaIka()" />
-    </form>
 
     <footer id="foot01"></footer>
     </div>
